@@ -1,0 +1,221 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+
+body {
+    height: 100vh; /* Ensure body and html take the full height */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    background-image: url(image3.jpg);
+    background-size: cover; /* Cover the entire viewport */
+    position: relative; /* Position relative for positioning pseudo-element */
+    overflow: hidden; /* Hide overflow */
+}
+
+body::before {
+    content: ''; /* Create a pseudo-element */
+    position: absolute; /* Position absolute to cover the body */
+    top: 0; /* Align to top */
+    left: 0; /* Align to left */
+    right: 0; /* Align to right */
+    bottom: 0; /* Align to bottom */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    backdrop-filter: blur(10px); /* Blur effect */
+    z-index: -1; /* Place behind other content */
+}
+
+#loancal {
+    display: flex;
+    flex-direction: column; /* Align content in a column */
+    align-items: flex-start; /* Align items to the left inside the container */
+    justify-content: flex-start; /* Align content to the top inside the container */
+    width: 80vmin;
+    height: 80vmin;
+    background-color: rgba(0, 0, 0, 0.7); /* Transparent black to blend with background */
+    color: black; /* Change text color to ensure readability */
+    padding: 20px; /* Add padding for better spacing */
+    border-radius: 15px; /* Increase border-radius for softer corners */
+    background-image: url('image2.png'); /* Background image */
+    background-size: cover; /* Ensure image covers the entire container */
+    background-position: center; /* Center the background image */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Add shadow for a floating effect */
+    backdrop-filter: blur(8px);
+    
+}
+
+
+.heading {
+    display: block; /* Standard block display */
+    border-radius: 5px;
+    background-color: aquamarine;
+    padding: 10px;
+    margin: 5vmin 10vmin 10vmin 25vmin;
+    background-size: cover; /* Ensure image covers the entire container */
+    background-position: center; /* Center the background image */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Add shadow for a floating effect */
+    backdrop-filter: blur(8px);
+    
+}
+
+.input-icon {
+    position: relative; /* Positioning context for the icon */
+    width: 100%; /* Full width */
+}
+
+/* Input field styles */
+input {
+    width: calc(100% - 30px); /* Full width minus icon space */
+    padding: 10px 40px 10px 10px; /* Padding for the input */
+    margin: 10px 0; /* Space above and below the input */
+    border: 2px solid #4CAF50; /* Green border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+    outline: none; /* Remove default outline */
+}
+
+/* Focus state */
+input:focus {
+    border-color: #45a049; /* Darker green border on focus */
+    box-shadow: 0 0 5px rgba(72, 187, 106, 0.5); /* Glow effect */
+    transform: scale(1.02); /* Slightly increase size */
+}
+
+/* Icon styles */
+.input-icon i {
+    position: absolute; /* Absolute positioning for the icon */
+    right: 20px; /* Space from the right */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust for vertical centering */
+    color: #4CAF50; /* Green color */
+    font-size: 18px; /* Font size for icon */
+    pointer-events: none; /* Prevent pointer events on icon */
+}
+
+/* Placeholder styles */
+input::placeholder {
+    color: #999; /* Placeholder color */
+    opacity: 1; /* Make sure placeholder is opaque */
+    transition: color 0.3s ease; /* Smooth transition for color */
+}
+
+/* Change placeholder color on focus */
+input:focus::placeholder {
+    color: transparent; /* Hide placeholder on focus */
+}
+
+
+.amt {
+    color: black;
+    margin-left: 16px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-size: cover; /* Ensure image covers the entire container */
+    background-position: center; /* Center the background image */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Add shadow for a floating effect */
+    backdrop-filter: blur(20px);
+    padding: 12px 20px 12px 20px;
+}
+
+#amount {
+    width: 21vmin;
+    height: 3vmin;
+    margin: 10px;
+    border-radius: 5px;
+    background-size: cover; /* Ensure image covers the entire container */
+    background-position: center; /* Center the background image */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Add shadow for a floating effect */
+    backdrop-filter: blur(8px);
+}
+
+.interest {
+    color: black;
+    margin-left: 16px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-size: cover; /* Ensure image covers the entire container */
+    background-position: center; /* Center the background image */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Add shadow for a floating effect */
+    backdrop-filter: blur(20px);
+    padding: 12px 20px 12px 20px;
+}
+
+#interest_rate {
+    width: 21vmin;
+    height: 3vmin;
+    margin: 10px;
+    border-radius: 5px;
+    background-size: cover; /* Ensure image covers the entire container */
+    background-position: center; /* Center the background image */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Add shadow for a floating effect */
+    backdrop-filter: blur(8px);
+}
+
+.mnt {
+    color: black;
+    margin-left: 16px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-size: cover; /* Ensure image covers the entire container */
+    background-position: center; /* Center the background image */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Add shadow for a floating effect */
+    backdrop-filter: blur(20px);
+    padding: 12px 20px 12px 20px;
+}
+
+#months {
+    width: 26vmin;
+    height: 3vmin;
+    margin: 10px;
+    border-radius: 5px;
+    background-size: cover; /* Ensure image covers the entire container */
+    background-position: center; /* Center the background image */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Add shadow for a floating effect */
+    backdrop-filter: blur(8px);
+}
+
+.btns {
+    display: flex;
+    justify-content: center; /* Center the buttons horizontally */
+    margin-top: 20px; /* Space above the buttons */
+}
+
+button {
+    background-color: #4CAF50; /* Green background */
+    border: none; /* Remove default border */
+    color: white; /* White text color */
+    padding: 15px 25px; /* Padding for the button */
+    text-align: center; /* Center text */
+    text-decoration: none; /* No underline */
+    display: inline-block; /* Inline block element */
+    font-size: 16px; /* Font size */
+    margin: 10px; /* Space between buttons */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s, transform 0.2s; /* Transition for background color and transform */
+    position: relative; /* For the animation effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow for depth */
+}
+
+button:hover {
+    background-color: #45a049; /* Darker green on hover */
+    transform: translateY(-3px); /* Move up slightly on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Increase shadow on hover */
+}
+
+button:active {
+    transform: translateY(1px); /* Slightly move down when clicked */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Reset shadow */
+}
+
+.fa-solid {
+    margin-left: 8px; /* Space between text and icon */
+    transition: transform 0.3s; /* Transition for the icon */
+}
+
+button:hover .fa-solid {
+    transform: rotate(360deg); /* Rotate icon on hover */
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mortage Calculator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="loancal" >
+        <h1 class="heading">Loan Calculator</h1>
+        
+        <div class="amt">
+            <p>Loan Amount: 
+                <span class="input-icon">
+                    <input id="amount" type="number" min="1" max="5000000" placeholder="Enter loan amount" required>
+                    <i class="fa-solid fa-indian-rupee-sign"></i>
+                </span>
+            </p>
+        </div>
+        
+        <div class="interest">
+            <p>Interest Rate: 
+                <span class="input-icon">
+                    <input id="interest_rate" type="number" min="0" max="100" value="" step="0.1" placeholder="Enter interest rate" required>
+                    <i class="fa-solid fa-percent"></i>
+                </span>
+            </p>
+        </div>
+        
+        <div class="mnt">
+            <p>Months to Pay: 
+                <span class="input-icon">
+                    <input id="months" type="number" min="1" max="300" value="" step="1" placeholder="Enter number of months" required>
+                    <i class="fa-solid fa-calendar-days"></i>
+                </span>
+            </p>
+        </div>
+        <h2 id="payment"></h2>
+        <div class="btns">
+            <button id="calculateBtn">Calculate <i class="fa-solid fa-2x fa-calculator"></i></button>
+            <button id="resetBtn">Reset <i class="fa-solid fa-2x fa-rotate fa-spin"></i></button>    
+        </div>
+        
+        
+        <!-- This is where the output of the loan computation will appear -->
+        
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
